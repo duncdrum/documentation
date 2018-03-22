@@ -3,6 +3,7 @@ target/
 .idea/
 *.xpr
 
+node_modules/
 css/
 images/
 github-report.html
