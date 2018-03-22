@@ -143,8 +143,7 @@
             </goals>
             <!-- optional: default phase is "generate-resources" -->
             <phase>generate-resources</phase>
-          </execution>
-
+          </execution>        
         </executions>
       </plugin>
       <plugin>
