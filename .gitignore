@@ -4,6 +4,7 @@ target/
 *.xpr
 
 node_modules/
+node/
 css/
 images/
 github-report.html
