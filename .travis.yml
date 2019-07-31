@@ -31,7 +31,7 @@ before_script:
   - docker cp ./target/exist-documentation-*.xar exist-ci:exist/autodeploy
   - docker start exist-ci
   # exist needs time
-  - sleep 30
+  - sleep 35
 
 script:
   - mvn validate
