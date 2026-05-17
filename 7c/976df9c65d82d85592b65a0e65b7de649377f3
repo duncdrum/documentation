@@ -1,0 +1,23 @@
+src/main/xar-resources/modules/diagnostics.xql
+  s_1420b6e3b22a31::t_851104bbb67a31 46,56,76-77,98,105,117,127,133,141,156
+src/main/xar-resources/modules/config.xqm
+  s_1420b6e3b22a31::t_555278837e174f 93,96,107
+src/main/xar-resources/modules/review.xql
+  s_1420b6e3b22a31::t_8b2d42b862ec16 56,86,88,95,98,103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "7c976df9c65d82d85592b65a0e65b7de649377f3",
+  "prompts": {},
+  "sessions": {
+    "s_1420b6e3b22a31": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1c9d9abfefferU3vr8p8KvlCVL",
+        "model": "big-pickle"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
