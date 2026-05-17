@@ -1,0 +1,21 @@
+Gulpfile.js
+  s_1420b6e3b22a31::t_536afa7bb2b014 8
+  s_1420b6e3b22a31::t_a7f62f01f4d175 94
+  s_1420b6e3b22a31::t_c97d81cce8b518 111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "c140911c2e659a119c894fbeab0f01aa6dc52638",
+  "prompts": {},
+  "sessions": {
+    "s_1420b6e3b22a31": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1c9d9abfefferU3vr8p8KvlCVL",
+        "model": "big-pickle"
+      },
+      "human_author": null
+    }
+  }
+}
