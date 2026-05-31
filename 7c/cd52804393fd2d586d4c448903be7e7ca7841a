@@ -1,0 +1,19 @@
+xar-assembly.xml
+  s_e511a8c2b24d25::t_4e0d69d0750e20 21,26-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7ccd52804393fd2d586d4c448903be7e7ca7841a",
+  "prompts": {},
+  "sessions": {
+    "s_e511a8c2b24d25": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1823e9434ffeeLIecitutQcmhp",
+        "model": "big-pickle"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
