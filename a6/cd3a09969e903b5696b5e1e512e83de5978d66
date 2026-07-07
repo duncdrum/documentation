@@ -1,0 +1,75 @@
+src/main/xar-resources/data/xquery/xquery.xml
+  s_a16a808e4ef4ca::t_b9fa2caf3a9e6f 273-279
+  s_a16a808e4ef4ca::t_98914a870b42cb 8
+src/main/xar-resources/data/scheduler/scheduler.xml
+  s_a16a808e4ef4ca::t_231e9735557d5c 31,35-45
+  s_a16a808e4ef4ca::t_f42007ea1ab106 132-133
+  s_a16a808e4ef4ca::t_834050c8b1a691 164
+  s_a16a808e4ef4ca::t_c4ae26b9a3a32d 158
+  s_a16a808e4ef4ca::t_7f7cc937914793 8
+src/main/xar-resources/data/devguide_indexes/devguide_indexes.xml
+  s_a16a808e4ef4ca::t_a927ffe94fb114 362-409
+  s_a16a808e4ef4ca::t_4d915777b9f05e 8
+src/main/xar-resources/data/extensions/extensions.xml
+  s_a16a808e4ef4ca::t_e6ea75eda92ed2 124
+  s_a16a808e4ef4ca::t_8b8221de09fc67 88
+  s_a16a808e4ef4ca::t_cbd436aa5205b5 39-46
+  s_a16a808e4ef4ca::t_8990247457228e 93
+  s_a16a808e4ef4ca::t_28072cf943f7dd 8
+  s_a16a808e4ef4ca::t_61bc2aeef43cbc 50,52
+src/main/xar-resources/data/incompatibilities/incompatibilities.xml
+  s_a16a808e4ef4ca::t_53bf856ad3865f 6
+  s_a16a808e4ef4ca::t_edfcc1fecb4384 16-32,34-45
+  s_963b4b083bb03e::t_39d94f77bdca53 33
+src/main/xar-resources/data/indexing/indexing.xml
+  s_a16a808e4ef4ca::t_a250781dc972a6 287-292,296-300
+  s_a16a808e4ef4ca::t_db048eebf1fbf0 6
+src/main/xar-resources/data/configuration/listings/listing-5.xml
+  s_a16a808e4ef4ca::t_a7bc698e499b4e 2-11
+src/main/xar-resources/data/configuration/configuration.xml
+  s_a16a808e4ef4ca::t_3bc008a9684371 745-746
+  s_a16a808e4ef4ca::t_a3a38163349bfb 343
+  s_a16a808e4ef4ca::t_994e4c5bfa7e2a 24-25,28
+  s_a16a808e4ef4ca::t_c226055f9317a1 1151-1153
+  s_a16a808e4ef4ca::t_e2dc5a4098630d 576-583
+  s_a16a808e4ef4ca::t_1ab699f7e0eb93 884
+  s_a16a808e4ef4ca::t_8eca36445589cd 693
+  s_a16a808e4ef4ca::t_a7b4e090cfc670 1018
+  s_a16a808e4ef4ca::t_e29b17714a9586 1169-1173
+  s_a16a808e4ef4ca::t_5094a350f6bac2 1087-1091
+  s_a16a808e4ef4ca::t_639719a53e3157 739-744,747-748
+  s_a16a808e4ef4ca::t_fa0c14f008add0 8
+  s_a16a808e4ef4ca::t_6e2dd8e1409981 854-855
+  s_a16a808e4ef4ca::t_1ecd423f462871 813
+  s_a16a808e4ef4ca::t_c5593c004a72e6 870
+  s_a16a808e4ef4ca::t_d0a0a618aed150 324
+  s_a16a808e4ef4ca::t_732cbfcc852512 282
+  s_a16a808e4ef4ca::t_5a37465a305a65 585
+  s_a16a808e4ef4ca::t_7ea6f240be9880 1047-1058
+  s_a16a808e4ef4ca::t_65b86b31dc48e0 424,432
+  s_a16a808e4ef4ca::t_33570438ffab04 1033
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a6cd3a09969e903b5696b5e1e512e83de5978d66",
+  "prompts": {},
+  "sessions": {
+    "s_963b4b083bb03e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0c3775f5dffeHkETc0EDRjH9B6",
+        "model": "hy3-free"
+      },
+      "human_author": null
+    },
+    "s_a16a808e4ef4ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "137e2e75-2403-49ee-a9e9-c1618f087904",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
