@@ -1,0 +1,20 @@
+src/main/xar-resources/data/templating/templating.xml
+  s_7c779d568e60f5::t_dd844c0949b344 8
+  s_7c779d568e60f5::t_0f98a787f0d4ec 538-555
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "774d104b28404e7b852449096bf6e693aaf505d4",
+  "prompts": {},
+  "sessions": {
+    "s_7c779d568e60f5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58c5cfa2-2f58-4b9d-af28-b664872b8b45",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
