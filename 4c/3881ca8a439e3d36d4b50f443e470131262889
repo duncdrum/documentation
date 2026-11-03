@@ -1,0 +1,26 @@
+Gulpfile.js
+  s_29c2370bd9533b::t_fc20637225810f 124
+  s_29c2370bd9533b::t_8a1fa5af8dc208 193
+  s_29c2370bd9533b::t_acf4358c6e4864 76-78
+package.json
+  s_29c2370bd9533b::t_071b57f03bb09b 44
+  s_29c2370bd9533b::t_1d2e5834a02b30 50
+package-lock.json
+  s_29c2370bd9533b::t_a6c8e88b5dc37b 30,36,721-733,2464-2473,2488-2497,3226-3235,3572-3574,3578-3581,5995-5997,6001-6043
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4c3881ca8a439e3d36d4b50f443e470131262889",
+  "prompts": {},
+  "sessions": {
+    "s_29c2370bd9533b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "4ab49dfc-1df4-47e4-8a50-2d167fb26953",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
