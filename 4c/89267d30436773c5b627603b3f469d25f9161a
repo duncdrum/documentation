@@ -1,0 +1,22 @@
+src/test/mocha/xqSuite.js
+  s_f8db459c5e9208::t_4ea77b114c1dbc 1-2,12-48
+pom.xml
+  s_f8db459c5e9208::t_d44cd4afa1068f 272-320
+  s_f8db459c5e9208::t_2d9098653b321d 389
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4c89267d30436773c5b627603b3f469d25f9161a",
+  "prompts": {},
+  "sessions": {
+    "s_f8db459c5e9208": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5d5fb820-4102-45f4-8ebd-065cf9307da5",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
