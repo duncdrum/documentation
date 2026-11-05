@@ -1,0 +1,19 @@
+src/test/mocha/xqSuite.js
+  s_f8db459c5e9208::t_3a170c8a3e86d6 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6170618384a96d84919035e90ba19704bb862747",
+  "prompts": {},
+  "sessions": {
+    "s_f8db459c5e9208": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5d5fb820-4102-45f4-8ebd-065cf9307da5",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
