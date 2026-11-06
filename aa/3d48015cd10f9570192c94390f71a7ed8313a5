@@ -1,0 +1,21 @@
+src/main/xar-resources/data/configuration/configuration.xml
+  s_37af0e8ea2e8da::t_7bc6457e91b43a 781-788,818-822
+src/main/xar-resources/data/devguide_rest/devguide_rest.xml
+  s_37af0e8ea2e8da::t_7bc6457e91b43a 125-132,138-143,148,150-157,161-164,184-189
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aa3d48015cd10f9570192c94390f71a7ed8313a5",
+  "prompts": {},
+  "sessions": {
+    "s_37af0e8ea2e8da": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "4f52a050-250b-446c-b307-7d024fb327c8",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
