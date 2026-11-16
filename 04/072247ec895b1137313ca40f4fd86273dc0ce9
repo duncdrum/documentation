@@ -1,0 +1,23 @@
+src/main/xar-resources/data/jmx/jmx.xml
+  s_7706e27dff665e::t_55c0e3a38521de 221-232
+src/main/xar-resources/data/configuration/configuration.xml
+  s_7706e27dff665e::t_360cc58ff8fee6 524,531-532,534-613
+src/main/xar-resources/data/configuration/listings/listing-4.xml
+  s_7706e27dff665e::t_473d09e060b40e 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "04072247ec895b1137313ca40f4fd86273dc0ce9",
+  "prompts": {},
+  "sessions": {
+    "s_7706e27dff665e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c70efcb1-bba9-4559-8700-cc8bc501bf09",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
