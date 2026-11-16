@@ -219,6 +219,18 @@
                     </listitem>
                 </varlistentry>
                 <varlistentry>
+                    <term><code>nodelookups</code></term>
+                    <listitem>
+                        <para>How nodes are found again by their unique node identifier in the DOM
+                            index: the configured <literal>index-depth</literal> and
+                            <literal>index-scan-limit</literal>, and counters for the lookups that
+                            found an entry of their own, that read forward from an entry (in
+                            buckets of a quarter, a half and the whole scan limit, and beyond it),
+                            that climbed to an ancestor, and the entries that were ignored. See
+                            <link xlink:href="configuration#indexer-dom-index">the DOM index</link>.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
                     <term><code>all</code></term>
                     <listitem>
                         <para>Dumps all known JMX objects in eXist's namespace.</para>

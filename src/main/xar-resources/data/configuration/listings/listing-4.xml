@@ -1,4 +1,4 @@
-<indexer caseSensitive="yes" index-depth="5" preserve-whitespace-mixed-content="no" suppress-whitespace="none">
+<indexer caseSensitive="yes" index-depth="5" index-scan-limit="64" preserve-whitespace-mixed-content="no" suppress-whitespace="none">
   <modules>
     <module id="ngram-index" file="ngram.dbx" n="3" class="org.exist.indexing.ngram.NGramIndex"/>
     <!-- <module id="spatial-index" connectionTimeout="10000" flushAfter="300" class="org.exist.indexing.spatial.GMLHSQLIndex"/> -->

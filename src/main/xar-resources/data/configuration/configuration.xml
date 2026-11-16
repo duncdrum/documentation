@@ -521,35 +521,96 @@
                                 is available.</para>
                         </listitem>
                     </varlistentry>
-                    <varlistentry>
+                    <varlistentry xml:id="indexer-dom-index">
                         <term> <code>index-depth</code> </term>
                         <listitem>
                             <para>This attribute specifies the depth of the DOM index, or the tree
                                 level up to which elements will be added to the index. For example,
                                 a value of <literal>2</literal> results in the document root node
                                 and all its child elements being indexed; a value of
-                                <literal>1</literal> only indexes the root node.</para>
+                                <literal>1</literal> only indexes the root node. The default is
+                                <literal>5</literal>.</para>
                             <para>The DOM index maps unique node identifiers to the nodes' storage
-                                locations in the DOM file. Generating this index is time- and
-                                memory-consuming. It is furthermore primarily needed to access nodes
-                                by their unique node identifier, for example, when serializing XML
-                                data for query results or XUpdate - which are operations not
-                                normally considered time-critical. Moreover, most XPath expressions
-                                can do without this index since they use short-cuts to access the
-                                node directly.</para>
-                            <para>Normally only top-level elements are added to the DOM index,
-                                whereas attributes and text nodes are always excluded. This results
-                                in much smaller index sizes and, consequently, a smaller
-                                <literal>dom.dbx</literal> file size. Usually, setting the
-                                <literal>index-depth</literal> to a value of <literal>2</literal>
-                                offers a reasonable compromise of index size and performance.</para>
-                            <para>However, if your documents are
-                                <emphasis>deeply-structured</emphasis>, you might consider
-                                increasing this setting to a level of 3, 4 or 5. For example, if the
-                                longest path from the document root to an element node has greater
-                                than ten node levels, an <literal>index-depth</literal> setting of
-                                <literal>4</literal> or <literal>5</literal> would probably help to
-                                increase overall query performance for some types of queries.</para>
+                                locations in the DOM file (<literal>dom.dbx</literal>). It is used
+                                to find a node again by its unique node identifier, for example
+                                when serializing XML data for query results, for XUpdate, for the
+                                <literal>..</literal> and <literal>ancestor::</literal> steps and
+                                for <literal>util:node-by-id</literal>, and when the Lucene and
+                                range indexes walk up from a node to evaluate a field. Most XPath
+                                expressions can do without it since they use short-cuts to access
+                                the node directly.</para>
+                            <para>Attributes never get an entry. Text nodes get one only as an
+                                anchor (see <literal>index-scan-limit</literal>). This keeps the
+                                index, and with it the <literal>dom.dbx</literal> file, small.
+                                A node that has no entry is found by reading forward from the
+                                nearest entry before it.</para>
+                            <para>If your documents are <emphasis>deeply-structured</emphasis>,
+                                a higher value puts more of their elements into the index. It makes
+                                the file larger and slows down storing, reindexing and removing:
+                                in our measurements <literal>10</literal> instead of
+                                <literal>5</literal> added 7% to 16% to the size of
+                                <literal>dom.dbx</literal> and 17% to 22% to the time to store,
+                                reindex and remove a document. In
+                                most cases <literal>index-scan-limit</literal> is the better
+                                way to speed up the lookup of deep nodes.</para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term> <code>index-scan-limit</code> </term>
+                        <listitem>
+                            <para>The most records that finding a node by its unique node
+                                identifier reads, counted from the nearest entry in the DOM index
+                                before the node. Without a limit, finding a node below the
+                                <literal>index-depth</literal> costs as much as the width of its
+                                parent: many such lookups under one wide parent take time that
+                                grows with the square of its width. With a limit, every record
+                                other than an attribute that completes a run of that many records
+                                without an entry gets an extra entry, an <emphasis>anchor</emphasis>,
+                                so that the cost no longer depends on the shape of the document. The
+                                default is <literal>64</literal>.</para>
+                            <para><literal>index-depth</literal> and
+                                <literal>index-scan-limit</literal> together decide how sparse or
+                                how dense the DOM index is:</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para><literal>0</literal> stores no anchors. The index is as
+                                        sparse as it was before eXist-db 7.0: only the elements
+                                        down to <literal>index-depth</literal> have an entry.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>The default, <literal>64</literal>, is a hybrid: the
+                                        elements down to <literal>index-depth</literal>, plus an
+                                        anchor wherever 64 records have passed without an entry.
+                                        In our measurements it adds about 1% to the size of
+                                        <literal>dom.dbx</literal> and 1% to 4% to the time to
+                                        store, reindex and remove documents, and finding nodes
+                                        below the <literal>index-depth</literal> is much faster,
+                                        for example three page-view interactions on 100
+                                        paragraphs of the TEI Publisher demo data went from 7
+                                        seconds to 54 milliseconds.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>A smaller value gives a denser index: one record in
+                                        that many gets an entry, so lookups read less and the file
+                                        grows. Below <literal>8</literal> the server logs a
+                                        warning.</para>
+                                </listitem>
+                            </itemizedlist>
+                            <para>The limit holds for documents that are stored, restored or
+                                defragmented from now on, and for a reindex that stores the
+                                documents again (<literal>xmldb:reindex</literal> in
+                                <literal>STORE</literal> mode); after updates a run can be up to
+                                twice as long as the limit. A reindex that only rebuilds the Lucene
+                                or range indexes, or repairs, does not add anchors. A lookup never
+                                depends on an entry being there, so you can change the value, or
+                                set it to <literal>0</literal>, whenever you like (it is read when
+                                the database starts): documents keep the entries they have until
+                                they are stored again. An attribute is not
+                                covered by the limit: finding an attribute of an element with more
+                                attributes than the limit reads the attributes before it.</para>
+                            <para>The <literal>NodeLookups</literal> JMX bean shows the configured
+                                values and counts how lookups were answered; see <link
+                                xlink:href="jmx#jmxservlet">JMX</link>.</para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
